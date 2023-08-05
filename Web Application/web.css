@@ -1,0 +1,113 @@
+body {
+    background-image: url("05.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+.nav_bar {
+    width: 85%;
+    height: 5%;
+    display: flex;
+    background-color: rgb(37, 224, 4);
+    padding-left: 15%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+
+}
+
+.search_bar {
+    width: 80%;
+    height: 100%;
+}
+
+.logo {
+    margin-left: 50px;
+    width: 20%;
+}
+
+.logo img {
+    margin-left: 10%;
+    width: 20%;
+}
+
+.search_bar input {
+    height: 80%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.cart_logo {}
+
+.cont2 {
+
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 90%;
+
+}
+
+.card1 {
+    padding: 1%;
+    width: 80%;
+    height: 130px;
+    margin: 2%;
+    margin-left: 5%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+
+.card1 img {
+    width: 130px;
+    height: 130px;
+}
+
+.card1 input {
+    margin-top: 5%;
+    width: 40px;
+    height: 40px;
+}
+
+.itm_desc {
+    margin-top: 5%;
+    font-size: 25px;
+    width: 70%;
+}
+
+.order {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgb(48, 230, 16);
+    font-size: 40px;
+    margin-left: 50%;
+}
+
+.order input {
+    background-color: rgb(48, 230, 16);
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.cart_logo img {
+    width: 40px;
+}
+
+.container {
+    padding-bottom: 2%;
+    margin-left: 10%;
+    width: 80%;
+    background-color: rgba(107, 243, 89, 0.212);
+}
+
+.txt {
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 247, 0);
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 43px;
+}

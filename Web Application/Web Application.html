@@ -1,0 +1,85 @@
+<html>
+
+<head>
+  <title>
+    Autonomuos Shopping cart
+  </title>
+  <title>Shopping Cart</title>
+
+  <link rel="stylesheet" type="text/css" href="web.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="cont">
+      <div class="cont-pic">
+        <div class="txt">Place Your Order here...</div>
+      </div>
+      <div class="nav_bar">
+        <div class="search_bar"><input type="text"></div>
+        <div class="logo"><img src="954591.png"></div>
+
+      </div>
+    </div>
+    <form id="orderForm">
+      <div class="cont2">
+        <div class="card1">
+          <img src="02.jpg" />
+          <div class="itm_desc">Aloe coma</div>
+          <input type="checkbox" id="item1" name="items" value="1"/>
+        </div>
+        <div class="card1">
+          <img src="asamodagam.png" />
+          <div class="itm_desc">asamodagam</div>
+          <input type="checkbox" id="item2" name="items" value="2" />
+        </div>
+        <div class="card1">
+          <img src="suncrush.jpg" />
+          <div class="itm_desc">sun crush</div>
+          <input type="checkbox" id="item3" name="items" value="3"/>
+        </div>
+        <div class="card1">
+          <img src="chello.png" />
+          <div class="itm_desc">Chello</div>
+          <input type="checkbox" id="item4" name="items" value="4"/>
+        </div>
+        <div class="order">
+          <input type="submit" name="submit" value="Order" />
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission
+    document.getElementById('orderForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get the selected items from the checkboxes
+      const selectedItems = Array.from(document.querySelectorAll('input[name="items"]:checked'))
+        .map(checkbox => checkbox.value);
+
+      // Create the HTTP request URL
+      const url = `http://192.168.8.199/data?items=${selectedItems.join(',')}`;
+
+      // Send the HTTP request to the NodeMCU server
+      fetch(url)
+        .then(function (response) {
+          if (response.ok) {
+            console.log('Order submitted successfully');
+            // Perform any further actions or show success message
+          } else {
+            console.log('Failed to submit order');
+            // Handle error cases or show error message
+          }
+        })
+        .catch(function (error) {
+          console.log('Error occurred:', error);
+          // Handle error cases or show error message
+        });
+    });
+
+  </script>
+</body>
+
+</html>
